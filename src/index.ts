@@ -329,7 +329,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           properties: {
             query: {
               type: "string",
-              description: "搜索关键词"
+              description: "搜索英文关键词"
             },
             maxResults: {
               type: "number",
