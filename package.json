@@ -1,65 +1,53 @@
 {
-    "name": "@langgpt/arxiv-mcp-server",
-    "version": "1.1.6",
-    "description": "一个基于arxiv的论文解读器，将arxiv的论文转为通俗易懂的文章和语音",
+    "name": "@langgpt/arxiv-paper-mcp",
+    "version": "1.2.0",
+    "description": "一个简化的基于 arXiv 的论文检索与内容解析 MCP 服务器",
+    "type": "module",
     "main": "build/index.js",
     "bin": {
-        "arxiv-mcp-server": "build/index.js"
+      "arxiv-paper-mcp": "build/index.js"
     },
-    "type": "module",
     "scripts": {
-        "build": "tsc && chmod +x build/index.js",
-        "start": "node build/index.js",
-        "dev": "tsx src/index.ts",
-        "prepublishOnly": "npm run build"
+      "build": "tsc",
+      "dev": "tsc --watch",
+      "start": "node build/index.js",
+      "prepublishOnly": "npm run build"
     },
-    "files": [
-        "build/**/*",
-        "README.md"
-    ],
     "keywords": [
-        "mcp",
-        "arxiv",
-        "paper",
-        "ai",
-        "translation",
-        "chinese",
-        "tts",
-        "academic",
-        "research"
+      "arxiv",
+      "paper",
+      "mcp",
+      "model-context-protocol",
+      "pdf",
+      "research"
     ],
     "author": {
-        "name": "yzfly",
-        "email": "yz.liu.me@gmail.com",
-        "url": "https://github.com/yzfly"
+      "name": "yzfly",
+      "email": "yz.liu.me@gmail.com",
+      "url": "https://github.com/yzfly"
     },
     "license": "MIT",
     "repository": {
-        "type": "git",
-        "url": "https://github.com/yzfly/arxiv-mcp-server.git"
+      "type": "git",
+      "url": "https://github.com/yzfly/arxiv-paper-mcp.git"
     },
     "bugs": {
-        "url": "https://github.com/yzfly/arxiv-mcp-server/issues"
+      "url": "https://github.com/yzfly/arxiv-paper-mcp/issues"
     },
-    "homepage": "https://github.com/yzfly/arxiv-mcp-server#readme",
+    "homepage": "https://github.com/yzfly/arxiv-paper-mcp#readme",
+    "engines": {
+      "node": ">=18.0.0"
+    },
     "dependencies": {
-        "@agentic/arxiv": "^7.6.7",
-        "@modelcontextprotocol/sdk": "^0.6.0",
-        "axios": "^1.6.0",
-        "pdf-parse": "^1.1.1",
-        "pdfreader": "^3.0.7"
+      "@agentic/arxiv": "^7.6.7",
+      "@modelcontextprotocol/sdk": "^0.6.0",
+      "axios": "^1.7.9",
+      "jsdom": "^25.0.0",
+      "pdfreader": "^3.0.3"
     },
     "devDependencies": {
-        "@types/node": "^20.0.0",
-        "@types/pdf-parse": "^1.1.5",
-        "tsx": "^4.0.0",
-        "typescript": "^5.0.0"
-    },
-    "engines": {
-        "node": ">=18.0.0"
-    },
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org/"
+      "@types/jsdom": "^21.1.6",
+      "@types/node": "^20",
+      "typescript": "^5.0.0"
     }
-}
+  }
