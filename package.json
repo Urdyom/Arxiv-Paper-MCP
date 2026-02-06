@@ -1,6 +1,6 @@
 {
   "name": "@urdyom/arxiv-paper-mcp",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "description": "Arxiv paper search, download and parse for MCP",
   "type": "module",
   "main": "build/index.js",
@@ -22,7 +22,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@agentic/arxiv": "^8.1.2",
+    "@agentic/arxiv": "^7.6.9",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "axios": "^1.7.9",
     "jsdom": "^24.1.3",
