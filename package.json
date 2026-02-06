@@ -1,53 +1,38 @@
 {
-    "name": "@urdyom/arxiv-paper-mcp",
-    "version": "1.2.1",
-    "description": "一个简化的基于 arXiv 的论文检索与内容解析 MCP 服务器",
-    "type": "module",
-    "main": "build/index.js",
-    "bin": {
-      "arxiv-paper-mcp": "build/index.js"
-    },
-    "scripts": {
-      "build": "tsc",
-      "dev": "tsc --watch",
-      "start": "node build/index.js",
-      "prepublishOnly": "npm run build"
-    },
-    "keywords": [
-      "arxiv",
-      "paper",
-      "mcp",
-      "model-context-protocol",
-      "pdf",
-      "research"
-    ],
-    "author": {
-      "name": "urdyom",
-      "email": "a@gmail.com",
-      "url": "https://github.com/urdyom"
-    },
-    "license": "MIT",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/urdyom/arxiv-paper-mcp.git"
-    },
-    "bugs": {
-      "url": "https://github.com/urdyom/arxiv-paper-mcp/issues"
-    },
-    "homepage": "https://github.com/urdyom/arxiv-paper-mcp#readme",
-    "engines": {
-      "node": ">=18.0.0"
-    },
-    "dependencies": {
-      "@agentic/arxiv": "^7.6.7",
-      "@modelcontextprotocol/sdk": "^0.6.0",
-      "axios": "^1.7.9",
-      "jsdom": "^25.0.0",
-      "pdfreader": "^3.0.3"
-    },
-    "devDependencies": {
-      "@types/jsdom": "^21.1.6",
-      "@types/node": "^20",
-      "typescript": "^5.0.0"
-    }
-  }
+  "name": "@urdyom/arxiv-paper-mcp",
+  "version": "1.2.1",
+  "description": "Arxiv paper search, download and parse for MCP",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "arxiv-paper-mcp": "build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node build/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@agentic/arxiv": "^8.1.2",
+    "@modelcontextprotocol/sdk": "^1.17.1",
+    "axios": "^1.7.9",
+    "jsdom": "^24.1.3",
+    "pdfreader": "^3.0.7"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^20.14.10",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  },
+  "license": "MIT"
+}
