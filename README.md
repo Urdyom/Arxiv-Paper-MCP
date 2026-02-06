@@ -1,6 +1,6 @@
-# ArXiv Paper MCP
+# ArXiv Paper MCP 
 
-一个基于 arXiv 的论文检索与内容解析工具。支持 Model Context Protocol (MCP) 标准，提供论文搜索、PDF链接获取和内容解析功能。
+一个基于 arXiv 的论文检索与内容解析工具。支持 Model Context Protocol (MCP) 标准，提供论文搜索、PDF链接获取和内容解析功能。（基于原版本修复了 opencode 中 GPT 5.2 codex 调用失败的问题）
 
 ## 功能特性
 
